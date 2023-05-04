@@ -1,2 +1,3 @@
-.venv/
+smpvenv/
 .vscode/
+.gitignore

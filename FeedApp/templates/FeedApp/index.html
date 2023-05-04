@@ -1,12 +1,23 @@
 {% extends "FeedApp/base.html" %}
+{% load static %}
 
 {% block page_header %}
-    <div class="jumbotron">
-       <h1 class="display-3">Feed</h1>
-            <p class="lead">A Social Network where you can be you.
-            </p>
+<style>
+    .jumbotron {
+        background-image: url("static/FeedApp/images/JumbotronBackground.jpg");
+        background-size: cover;
+    }
+</style>
+<div class="jumbotron">
+    <div class="container-fluid">
+        <h1 class="display-5">Playground for Real Basketball Sneakerheads</h1>
+        <p class="lead">There are sneakers that cost more than an iPod. -- Steve Jobs
+        </p>
 
-            <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}"
-            role="button">Join Now &raquo;</a>
+        <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}" role="button">Join Now &raquo;</a>
     </div>
+</div>
+
+<link rel="stylesheet" href="{% static 'FeedApp/style.css' %}">
+
 {% endblock page_header %}
